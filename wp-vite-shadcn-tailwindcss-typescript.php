@@ -19,7 +19,7 @@ define( 'PPNINJA_FILE_BASENAME', plugin_basename( PPNINJA_FILE ) );
 
 define( 'PPNINJA_FILE_URL', plugins_url( '', PPNINJA_FILE ) );
 
-define( 'PPNINJA_DIR_URL', plugin_dir_url(  PPNINJA_FILE ) );
+define( 'PPNINJA_DIR_URL', plugin_dir_url( PPNINJA_FILE ) );
 
 define( 'PPNINJA_FILE_ABSPATH', dirname( PPNINJA_FILE ) );
 
@@ -44,7 +44,7 @@ class WVSTT {
 			[ $this, 'wcv2sp_render_custom_page_callback' ]
 		);
 	}
-	
+
 	/**
 	 * @return void
 	 */
@@ -53,6 +53,10 @@ class WVSTT {
 			[
 				'handle' => 'wcv2sp-settings',
 				'src'    => PPNINJA_FILE_URL . '/assets/admin/css/settings.css',
+			],
+			[
+				'handle' => 'custom-styles',
+				'src'    => PPNINJA_FILE_URL . '/assets/admin/css/custom-style.css',
 			],
 		];
 		// Register public styles.
@@ -72,13 +76,14 @@ class WVSTT {
 			wp_register_script( $script['handle'], $script['src'], $script['deps'], PPNINJA_VERSION, $script['footer'] );
 		}
 	}
-	
+
 	/**
 	 * @return void
 	 */
 	public function wcv2sp_render_custom_page_callback() {
 		wp_enqueue_script( 'wcv2sp-settings' );
 		wp_enqueue_style( 'wcv2sp-settings' );
+		wp_enqueue_style( 'custom-styles' );
 		?>
 		<div class="wrap">
 			<form method="post" action="admin.php?page=custom-menu" style="position: relative;">
