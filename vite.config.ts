@@ -10,8 +10,7 @@ export default defineConfig({
         outDir: 'assets', // compiled files output
         rollupOptions: {
             input: {
-                'admin/js/settings': path.resolve(__dirname, 'src/admin-settings.tsx'),
-                'frontend/js/frontend': path.resolve(__dirname, 'src/frontend.tsx')
+                'admin/js/settings': path.resolve(__dirname, 'src/admin-settings.tsx')
             },
             output: {
                 entryFileNames: "[name].js",
