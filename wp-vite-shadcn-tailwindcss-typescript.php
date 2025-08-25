@@ -53,11 +53,7 @@ class WVSTT {
 			[
 				'handle' => 'wcv2sp-settings',
 				'src'    => PPNINJA_FILE_URL . '/assets/admin/css/settings.css',
-			],
-			[
-				'handle' => 'custom-styles',
-				'src'    => PPNINJA_FILE_URL . '/assets/admin/css/custom-style.css',
-			],
+			]
 		];
 		// Register public styles.
 		foreach ( $styles as $style ) {
@@ -83,7 +79,6 @@ class WVSTT {
 	public function wcv2sp_render_custom_page_callback() {
 		wp_enqueue_script( 'wcv2sp-settings' );
 		wp_enqueue_style( 'wcv2sp-settings' );
-		wp_enqueue_style( 'custom-styles' );
 		?>
 		<div class="wrap">
 			<form method="post" action="admin.php?page=custom-menu" style="position: relative;">
