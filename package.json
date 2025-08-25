@@ -9,11 +9,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "watch": "vite build --watch",
+    "watch:build": "vite build --watch",
+    "dev:build": "vite build --watch --mode development",
     "package": "cross-env npm_config_package=true npm run build",
     "zip": "cross-env npm_config_package=true npm run build"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.12",
     "@vitejs/plugin-react": "^5.0.1",
