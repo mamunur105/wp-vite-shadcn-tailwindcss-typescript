@@ -3,10 +3,10 @@
  * Admin Area Hooks
  */
 
-namespace BFWOO\Hooks;
+namespace WPVSTT\Hooks;
 
-use BFWOO\Controllers\AdminController;
-use BFWOO\Traits\SingletonTrait;
+use WPVSTT\Controllers\AdminController;
+use WPVSTT\Traits\SingletonTrait;
 
 /**
  * Admin Hooks

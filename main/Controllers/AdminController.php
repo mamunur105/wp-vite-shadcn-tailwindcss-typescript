@@ -1,10 +1,10 @@
 <?php
 
-namespace BFWOO\Controllers;
+namespace WPVSTT\Controllers;
 
-use BFWOO\Helpers\Config;
-use BFWOO\Helpers\Fns;
-use BFWOO\Traits\SingletonTrait;
+use WPVSTT\Helpers\Config;
+use WPVSTT\Helpers\Fns;
+use WPVSTT\Traits\SingletonTrait;
 
 /**
  * AdminController
@@ -35,11 +35,11 @@ class AdminController {
 	public function render_custom_page_callback() {
 		wp_dequeue_script( 'common' );
 		wp_dequeue_script( 'svg-painter' );
-		wp_enqueue_script( 'bfwoo-settings' );
-		wp_enqueue_style( 'bfwoo-settings' );
-		wp_localize_script( 'bfwoo-settings', 'bfwoo_settings', Fns::get_options() );
+		wp_enqueue_script( 'wpvstt-settings' );
+		wp_enqueue_style( 'wpvstt-settings' );
+		wp_localize_script( 'wpvstt-settings', 'wpvstt_settings', Fns::get_options() );
 		?>
-		<div id="bfwoo-settings">Hello</div>
+		<div id="wpvstt-settings">Hello</div>
 		<?php
 	}
 }

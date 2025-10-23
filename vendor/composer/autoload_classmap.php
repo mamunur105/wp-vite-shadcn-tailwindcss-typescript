@@ -6,16 +6,16 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'BFWOO\\BadgesForWoo' => $baseDir . '/main/BadgesForWoo.php',
-    'BFWOO\\Controllers\\APIController' => $baseDir . '/main/Controllers/APIController.php',
-    'BFWOO\\Controllers\\AdminController' => $baseDir . '/main/Controllers/AdminController.php',
-    'BFWOO\\Controllers\\AssetsController' => $baseDir . '/main/Controllers/AssetsController.php',
-    'BFWOO\\Controllers\\FrontEndController' => $baseDir . '/main/Controllers/FrontEndController.php',
-    'BFWOO\\Helpers\\Config' => $baseDir . '/main/Helpers/Config.php',
-    'BFWOO\\Helpers\\Fns' => $baseDir . '/main/Helpers/Fns.php',
-    'BFWOO\\Hooks\\AdminHooks' => $baseDir . '/main/Hooks/AdminHooks.php',
-    'BFWOO\\Hooks\\CommonAreaHooks' => $baseDir . '/main/Hooks/CommonAreaHooks.php',
-    'BFWOO\\Hooks\\FrontEndHooks' => $baseDir . '/main/Hooks/FrontEndHooks.php',
-    'BFWOO\\Traits\\SingletonTrait' => $baseDir . '/main/Traits/SingletonTrait.php',
+    'WPVSTT\\BadgesForWoo' => $baseDir . '/main/BadgesForWoo.php',
+    'WPVSTT\\Controllers\\APIController' => $baseDir . '/main/Controllers/APIController.php',
+    'WPVSTT\\Controllers\\AdminController' => $baseDir . '/main/Controllers/AdminController.php',
+    'WPVSTT\\Controllers\\AssetsController' => $baseDir . '/main/Controllers/AssetsController.php',
+    'WPVSTT\\Controllers\\FrontEndController' => $baseDir . '/main/Controllers/FrontEndController.php',
+    'WPVSTT\\Helpers\\Config' => $baseDir . '/main/Helpers/Config.php',
+    'WPVSTT\\Helpers\\Fns' => $baseDir . '/main/Helpers/Fns.php',
+    'WPVSTT\\Hooks\\AdminHooks' => $baseDir . '/main/Hooks/AdminHooks.php',
+    'WPVSTT\\Hooks\\CommonAreaHooks' => $baseDir . '/main/Hooks/CommonAreaHooks.php',
+    'WPVSTT\\Hooks\\FrontEndHooks' => $baseDir . '/main/Hooks/FrontEndHooks.php',
+    'WPVSTT\\Traits\\SingletonTrait' => $baseDir . '/main/Traits/SingletonTrait.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

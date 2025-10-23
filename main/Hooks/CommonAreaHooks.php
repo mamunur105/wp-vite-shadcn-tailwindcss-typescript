@@ -3,11 +3,11 @@
  * Common Area Hooks
  */
 
-namespace BFWOO\Hooks;
+namespace WPVSTT\Hooks;
 
-use BFWOO\Controllers\APIController;
-use BFWOO\Controllers\AssetsController;
-use BFWOO\Traits\SingletonTrait;
+use WPVSTT\Controllers\APIController;
+use WPVSTT\Controllers\AssetsController;
+use WPVSTT\Traits\SingletonTrait;
 
 /**
  * CommonAreaHooks

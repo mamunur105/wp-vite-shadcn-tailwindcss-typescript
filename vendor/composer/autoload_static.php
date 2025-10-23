@@ -9,29 +9,29 @@ class ComposerStaticInitec39acfaccf4314b5b0efe0ef5538d49
     public static $prefixLengthsPsr4 = array (
         'B' => 
         array (
-            'BFWOO\\' => 6,
+            'WPVSTT\\' => 6,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'BFWOO\\' => 
+        'WPVSTT\\' =>
         array (
             0 => __DIR__ . '/../..' . '/main',
         ),
     );
 
     public static $classMap = array (
-        'BFWOO\\BadgesForWoo' => __DIR__ . '/../..' . '/main/BadgesForWoo.php',
-        'BFWOO\\Controllers\\APIController' => __DIR__ . '/../..' . '/main/Controllers/APIController.php',
-        'BFWOO\\Controllers\\AdminController' => __DIR__ . '/../..' . '/main/Controllers/AdminController.php',
-        'BFWOO\\Controllers\\AssetsController' => __DIR__ . '/../..' . '/main/Controllers/AssetsController.php',
-        'BFWOO\\Controllers\\FrontEndController' => __DIR__ . '/../..' . '/main/Controllers/FrontEndController.php',
-        'BFWOO\\Helpers\\Config' => __DIR__ . '/../..' . '/main/Helpers/Config.php',
-        'BFWOO\\Helpers\\Fns' => __DIR__ . '/../..' . '/main/Helpers/Fns.php',
-        'BFWOO\\Hooks\\AdminHooks' => __DIR__ . '/../..' . '/main/Hooks/AdminHooks.php',
-        'BFWOO\\Hooks\\CommonAreaHooks' => __DIR__ . '/../..' . '/main/Hooks/CommonAreaHooks.php',
-        'BFWOO\\Hooks\\FrontEndHooks' => __DIR__ . '/../..' . '/main/Hooks/FrontEndHooks.php',
-        'BFWOO\\Traits\\SingletonTrait' => __DIR__ . '/../..' . '/main/Traits/SingletonTrait.php',
+        'WPVSTT\\BadgesForWoo' => __DIR__ . '/../..' . '/main/BadgesForWoo.php',
+        'WPVSTT\\Controllers\\APIController' => __DIR__ . '/../..' . '/main/Controllers/APIController.php',
+        'WPVSTT\\Controllers\\AdminController' => __DIR__ . '/../..' . '/main/Controllers/AdminController.php',
+        'WPVSTT\\Controllers\\AssetsController' => __DIR__ . '/../..' . '/main/Controllers/AssetsController.php',
+        'WPVSTT\\Controllers\\FrontEndController' => __DIR__ . '/../..' . '/main/Controllers/FrontEndController.php',
+        'WPVSTT\\Helpers\\Config' => __DIR__ . '/../..' . '/main/Helpers/Config.php',
+        'WPVSTT\\Helpers\\Fns' => __DIR__ . '/../..' . '/main/Helpers/Fns.php',
+        'WPVSTT\\Hooks\\AdminHooks' => __DIR__ . '/../..' . '/main/Hooks/AdminHooks.php',
+        'WPVSTT\\Hooks\\CommonAreaHooks' => __DIR__ . '/../..' . '/main/Hooks/CommonAreaHooks.php',
+        'WPVSTT\\Hooks\\FrontEndHooks' => __DIR__ . '/../..' . '/main/Hooks/FrontEndHooks.php',
+        'WPVSTT\\Traits\\SingletonTrait' => __DIR__ . '/../..' . '/main/Traits/SingletonTrait.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

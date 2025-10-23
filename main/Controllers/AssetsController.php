@@ -1,9 +1,9 @@
 <?php
-namespace BFWOO\Controllers;
+namespace WPVSTT\Controllers;
 
-use BFWOO\Helpers\Config;
-use BFWOO\Helpers\Fns;
-use BFWOO\Traits\SingletonTrait;
+use WPVSTT\Helpers\Config;
+use WPVSTT\Helpers\Fns;
+use WPVSTT\Traits\SingletonTrait;
 
 /**
  * AssetsController
@@ -25,7 +25,7 @@ class AssetsController {
 			'rest_nonce'     => wp_create_nonce( 'wp_rest' ),
 			Config::NONCE_ID => wp_create_nonce( Config::NONCE_ID ),
 		];
-		wp_localize_script( 'bfwoo-settings', 'bfwooParams', $commonParams );
+		wp_localize_script( 'wpvstt-settings', 'wpvsttParams', $commonParams );
 	}
 
 	/**
@@ -34,17 +34,17 @@ class AssetsController {
 	public function register_admin_assets() {
 		$styles = [
 			[
-				'handle' => 'bfwoo-settings',
+				'handle' => 'wpvstt-settings',
 				'src'    => Fns::get_assets_uri( 'admin/css/settings.css' ),
 			],
 		];
 		// Register public styles.
 		foreach ( $styles as $style ) {
-			wp_register_style( $style['handle'], $style['src'], '', BFWOO_VERSION );
+			wp_register_style( $style['handle'], $style['src'], '', WPVSTT_VERSION );
 		}
 		$scripts = [
 			[
-				'handle' => 'bfwoo-settings',
+				'handle' => 'wpvstt-settings',
 				'src'    => Fns::get_assets_uri( 'admin/js/settings.js' ),
 				'deps'   => [ 'jquery' ],
 				'footer' => true,
@@ -52,7 +52,7 @@ class AssetsController {
 		];
 		// Register public scripts.
 		foreach ( $scripts as $script ) {
-			wp_register_script( $script['handle'], $script['src'], $script['deps'], BFWOO_VERSION, $script['footer'] );
+			wp_register_script( $script['handle'], $script['src'], $script['deps'], WPVSTT_VERSION, $script['footer'] );
 		}
 		$this->register_common_assets();
 	}
@@ -63,13 +63,13 @@ class AssetsController {
 	public function register_frontend_assets() {
 		$styles = [
 			[
-				'handle' => 'bfwoo-frontend',
+				'handle' => 'wpvstt-frontend',
 				'src'    => Fns::get_assets_uri( 'frontend/css/frontend.css' ),
 			],
 		];
 		// Register public styles.
 		foreach ( $styles as $style ) {
-			wp_register_style( $style['handle'], $style['src'], '', BFWOO_VERSION );
+			wp_register_style( $style['handle'], $style['src'], '', WPVSTT_VERSION );
 		}
 		$this->register_common_assets();
 	}

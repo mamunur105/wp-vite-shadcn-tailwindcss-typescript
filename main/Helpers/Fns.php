@@ -2,7 +2,7 @@
 /**
  * Functions
  */
-namespace BFWOO\Helpers;
+namespace WPVSTT\Helpers;
 
 // Do not allow directly accessing this file.
 
@@ -27,12 +27,12 @@ class Fns {
 	 */
 	public static function get_assets_uri( $file ) {
 		$file = ltrim( $file, '/' );
-		return trailingslashit( BFWOO_DIR_URL . 'assets' ) . $file;
+		return trailingslashit( WPVSTT_DIR_URL . 'assets' ) . $file;
 	}
 	/**
 	 * Options
 	 */
 	public static function get_options() {
-		return get_option( 'bfwoo_settings', [] );
+		return get_option( 'wpvstt_settings', [] );
 	}
 }

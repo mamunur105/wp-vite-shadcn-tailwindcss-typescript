@@ -3,9 +3,9 @@
  * Frontend Area Hooks
  */
 
-namespace BFWOO\Hooks;
+namespace WPVSTT\Hooks;
 
-use BFWOO\Traits\SingletonTrait;
+use WPVSTT\Traits\SingletonTrait;
 
 /**
  * FrontEndHooks

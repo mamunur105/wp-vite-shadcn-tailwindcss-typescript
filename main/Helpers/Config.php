@@ -3,7 +3,7 @@
  * Config
  */
 
-namespace BFWOO\Helpers;
+namespace WPVSTT\Helpers;
 
 // Do not allow directly accessing this file.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,18 +17,18 @@ class Config {
 	/**
 	 * Parent Menu Page Slug
 	 */
-	const MENU_PAGE_SLUG = 'bfwoo-variation';
+	const MENU_PAGE_SLUG = 'wpvstt-variation';
 	
 	/**
 	 * Nonce id
 	 *
 	 * @var string
 	 */
-	const NONCE_ID = 'bfwoo_wpnonce';
+	const NONCE_ID = 'wpvstt_wpnonce';
 	/**
 	 * Nonce Text
 	 *
 	 * @var string
 	 */
-	const NONCE_TEXT = 'bfwoo_nonce';
+	const NONCE_TEXT = 'wpvstt_nonce';
 }

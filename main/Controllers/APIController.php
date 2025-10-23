@@ -1,9 +1,9 @@
 <?php
 
-namespace BFWOO\Controllers;
+namespace WPVSTT\Controllers;
 
-use BFWOO\Traits\SingletonTrait;
-use BFWOO\Helpers\Fns;
+use WPVSTT\Traits\SingletonTrait;
+use WPVSTT\Helpers\Fns;
 
 /**
  * APIController
@@ -18,7 +18,7 @@ class APIController {
 	 * @return void
 	 */
 	public function register_rest_api_init() {
-		$route_namespace = 'bfwoo/v1/api';
+		$route_namespace = 'wpvstt/v1/api';
 		register_rest_route(
 			$route_namespace,
 			'/updateOptions',
@@ -50,7 +50,7 @@ class APIController {
 	 */
 	public function save_settings( $request ) {
 		$params = $request->get_params();
-		update_option( 'bfwoo_settings', $params );
+		update_option( 'wpvstt_settings', $params );
 		return Fns::get_options();
 	}
 	/**

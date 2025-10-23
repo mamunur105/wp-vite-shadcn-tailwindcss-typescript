@@ -15,7 +15,7 @@ const FieldWrapper: React.FC<FieldWrapperProps> = ({
 }) => {
 	return (
 		<div
-			className={`field-wrapper flex justify-between text-left mb-3 bfwoo-${type || ''} ${wrapperClass}`}
+			className={`field-wrapper flex justify-between text-left mb-3 wpvstt-${type || ''} ${wrapperClass}`}
 		>
 			<div className="field-label-wrapper w-2/5 mt-3 items-center text-base font-medium">
 				{label || 'Label'}

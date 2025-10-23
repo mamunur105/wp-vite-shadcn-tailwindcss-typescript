@@ -2,16 +2,16 @@
 /**
  * Main initialization class.
  *
- * @package BFWOO
+ * @package WPVSTT
  */
 
-namespace BFWOO;
+namespace WPVSTT;
 
 // Do not allow directly accessing this file.
-use BFWOO\Hooks\AdminHooks;
-use BFWOO\Hooks\CommonAreaHooks;
-use BFWOO\Hooks\FrontEndHooks;
-use BFWOO\Traits\SingletonTrait;
+use WPVSTT\Hooks\AdminHooks;
+use WPVSTT\Hooks\CommonAreaHooks;
+use WPVSTT\Hooks\FrontEndHooks;
+use WPVSTT\Traits\SingletonTrait;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
@@ -46,11 +46,11 @@ final class BadgesForWoo {
 	 * @return void
 	 */
 	public function init() {
-		do_action( 'bfwoo/before_init' );
+		do_action( 'wpvstt/before_init' );
 		AdminHooks::instance();
 		CommonAreaHooks::instance();
 		FrontEndHooks::instance();
-		do_action( 'bfwoo/after_init' );
+		do_action( 'wpvstt/after_init' );
 	}
 	/**
 	 * Checks if Pro version installed
@@ -58,7 +58,7 @@ final class BadgesForWoo {
 	 * @return boolean
 	 */
 	public function has_pro() {
-		return function_exists( 'BFWOO_PRO' );
+		return function_exists( 'WPVSTT_PRO' );
 	}
 	/**
 	 * PRO Version URL.

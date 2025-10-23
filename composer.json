@@ -2,7 +2,7 @@
     "name": "tinysolutions/badges-for-woo",
     "autoload": {
         "psr-4": {
-            "BFWOO\\": "main"
+            "WPVSTT\\": "main"
         }
     },
     "authors": [

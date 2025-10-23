@@ -1,9 +1,9 @@
 <?php
 
-namespace BFWOO\Controllers;
+namespace WPVSTT\Controllers;
 
-use BFWOO\Helpers\Fns;
-use BFWOO\Traits\SingletonTrait;
+use WPVSTT\Helpers\Fns;
+use WPVSTT\Traits\SingletonTrait;
 use WP_Query;
 
 /**

@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'BFWOO\\' => array($baseDir . '/main'),
+    'WPVSTT\\' => array($baseDir . '/main'),
 );

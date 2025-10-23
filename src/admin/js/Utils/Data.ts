@@ -8,7 +8,7 @@ import type { AxiosInstance, AxiosResponse } from 'axios';
  * WordPress localized parameters.
  * This is usually printed in the page using wp_localize_script().
  */
-declare const bfwooParams: {
+declare const wpvsttParams: {
     restApiUrl: string;
     rest_nonce: string;
 };
@@ -16,7 +16,7 @@ declare const bfwooParams: {
 /**
  * Base URL for your REST API.
  */
-const apiBaseUrl: string = `${bfwooParams.restApiUrl}bfwoo/v1/api`;
+const apiBaseUrl: string = `${wpvsttParams.restApiUrl}wpvstt/v1/api`;
 
 /**
  * Create an Axios instance configured for the WordPress REST API.
@@ -24,7 +24,7 @@ const apiBaseUrl: string = `${bfwooParams.restApiUrl}bfwoo/v1/api`;
 const Api: AxiosInstance = axios.create({
     baseURL: apiBaseUrl,
     headers: {
-        'X-WP-Nonce': bfwooParams.rest_nonce,
+        'X-WP-Nonce': wpvsttParams.rest_nonce,
     },
 });
 

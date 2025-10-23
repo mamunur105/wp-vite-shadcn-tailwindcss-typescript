@@ -1,6 +1,6 @@
 <?php
 
-namespace BFWOO\Traits;
+namespace WPVSTT\Traits;
 
 // Do not allow directly accessing this file.
 

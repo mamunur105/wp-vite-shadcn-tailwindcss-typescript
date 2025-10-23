@@ -4,7 +4,7 @@ import './css/index.css';
 import './css/admin.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('bfwoo-settings');
+    const container = document.getElementById('wpvstt-settings');
     // Type guard to ensure container is not null
     if (container) {
         // console.log('option?.optionFields?.fields', option?.optionFields?.fields );
