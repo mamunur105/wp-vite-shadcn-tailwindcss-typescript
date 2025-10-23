@@ -4,6 +4,8 @@
 namespace WPVSTT\Controllers;
 
 // Do not allow directly accessing this file.
+use WPVSTT\Helpers\Fns;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
 }
@@ -21,7 +23,7 @@ class Installation {
 	 * @return void
 	 */
 	public static function deactivation() {
-		wp_clear_scheduled_hook( 'tsmlt_upload_dir_scan' );
+		Fns::clear_scheduled_events();
 	}
 	/**
 	 * @return void

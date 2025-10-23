@@ -35,4 +35,33 @@ class Fns {
 	public static function get_options() {
 		return get_option( 'wpvstt_settings', [] );
 	}
+
+	/**
+	 * Action.
+	 *
+	 * @param string $action action.
+	 * @return void
+	 */
+	public static function add_to_scheduled_hook_list( $action ) {
+		if ( empty( $action ) ) {
+			return;
+		}
+		$schedule   = get_option( 'wpvstt_cron_schedule', [] );
+		$schedule[] = $action;
+		update_option( 'wpvstt_cron_schedule', array_unique( $schedule ) );
+	}
+	/**
+	 * Clear Scheduled Events
+	 *
+	 * @return void
+	 */
+	public static function clear_scheduled_events() {
+		$schedule = get_option( 'wpvstt_cron_schedule', [] );
+		if ( empty( $schedule ) ) {
+			return;
+		}
+		foreach ( $schedule as $v ) {
+			wp_clear_scheduled_hook( $v );
+		}
+	}
 }
