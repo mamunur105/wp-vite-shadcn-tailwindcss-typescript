@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Badges For Woocommerce
+ * Plugin Name: Vite shadcn tailwindcss typescript zustand
  * Plugin URI: #
  * Description: Vite shadcn tailwindcss typescript
  * Version: 0.0.1

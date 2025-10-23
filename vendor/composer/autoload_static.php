@@ -7,20 +7,21 @@ namespace Composer\Autoload;
 class ComposerStaticInitec39acfaccf4314b5b0efe0ef5538d49
 {
     public static $prefixLengthsPsr4 = array (
-        'B' => 
+        'W' => 
         array (
-            'WPVSTT\\' => 6,
+            'WPVSTT\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'WPVSTT\\' =>
+        'WPVSTT\\' => 
         array (
             0 => __DIR__ . '/../..' . '/main',
         ),
     );
 
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'WPVSTT\\BadgesForWoo' => __DIR__ . '/../..' . '/main/BadgesForWoo.php',
         'WPVSTT\\Controllers\\APIController' => __DIR__ . '/../..' . '/main/Controllers/APIController.php',
         'WPVSTT\\Controllers\\AdminController' => __DIR__ . '/../..' . '/main/Controllers/AdminController.php',
@@ -32,7 +33,6 @@ class ComposerStaticInitec39acfaccf4314b5b0efe0ef5538d49
         'WPVSTT\\Hooks\\CommonAreaHooks' => __DIR__ . '/../..' . '/main/Hooks/CommonAreaHooks.php',
         'WPVSTT\\Hooks\\FrontEndHooks' => __DIR__ . '/../..' . '/main/Hooks/FrontEndHooks.php',
         'WPVSTT\\Traits\\SingletonTrait' => __DIR__ . '/../..' . '/main/Traits/SingletonTrait.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

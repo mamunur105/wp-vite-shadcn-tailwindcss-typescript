@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'WPVSTT\\BadgesForWoo' => $baseDir . '/main/BadgesForWoo.php',
     'WPVSTT\\Controllers\\APIController' => $baseDir . '/main/Controllers/APIController.php',
     'WPVSTT\\Controllers\\AdminController' => $baseDir . '/main/Controllers/AdminController.php',
@@ -17,5 +18,4 @@ return array(
     'WPVSTT\\Hooks\\CommonAreaHooks' => $baseDir . '/main/Hooks/CommonAreaHooks.php',
     'WPVSTT\\Hooks\\FrontEndHooks' => $baseDir . '/main/Hooks/FrontEndHooks.php',
     'WPVSTT\\Traits\\SingletonTrait' => $baseDir . '/main/Traits/SingletonTrait.php',
-    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );
