@@ -1,0 +1,15 @@
+{
+    "name": "tinysolutions/badges-for-woo",
+    "autoload": {
+        "psr-4": {
+            "BFWOO\\": "main"
+        }
+    },
+    "authors": [
+      {
+        "name": "TinySolutions",
+        "email": "wptinysolution@gmail.com"
+      }
+    ],
+    "require": {}
+}
