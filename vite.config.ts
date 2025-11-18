@@ -5,26 +5,45 @@ import tailwindcss from "@tailwindcss/vite";
 // @ts-ignore
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
-    plugins: [react(), tailwindcss()],
+    plugins: [
+        react(),
+        tailwindcss(),
+        viteStaticCopy({
+            targets: [
+                {
+                    src: "src/images/**/*",   // source folder
+                    dest: "images",            // destination inside "assets/"
+                },
+            ],
+        }),
+    ],
     build: {
         outDir: 'assets', // compiled files output
         rollupOptions: {
             input: {
                 'admin/js/settings': path.resolve(__dirname, 'src/admin/adminSettings.tsx'),
                 'frontend/js/frontend': path.resolve(__dirname, 'src/frontend/js/frontend.js'),
-                'frontend/css/frontend': path.resolve(__dirname, 'src/frontend/css/frontend.scss')
+                'frontend/css/frontend': path.resolve(__dirname, 'src/frontend/css/frontend.scss'),
+                "admin/js/product_image_badge": path.resolve(__dirname, "src/admin/js/ImageBadgeControls/product_image_badge.js"),
+                "admin/js/image_upload": path.resolve(__dirname, "src/admin/js/ImageBadgeControls/image_upload.js"),
+                "admin/js/badge_position": path.resolve(__dirname, "src/admin/js/ImageBadgeControls/badge_position.js"),
+                "admin/css/product_badge": path.resolve(__dirname, "src/admin/css/product_badge.scss"),
             },
             output: {
                 entryFileNames: "[name].js",
                 assetFileNames: (assetInfo) => {
-                    if (assetInfo.name && assetInfo.name.endsWith(".css")) {
-                        if (assetInfo.name === "settings.css") {
-                            // force it to land inside admin/css/
+                    // Rollup 4+ uses `names` instead of deprecated `name`
+                    const names = assetInfo.names || [];
+                    const firstName = names[0] || ""; // handle array safely
+                    if (firstName.endsWith(".css")) {
+                        if (firstName.includes("settings")) {
+                            // Force this CSS to admin/css folder
                             return "admin/css/settings.css";
                         }
-                        // keep original for others like admin/css/* or frontend/css/*
+                        // Preserve original output structure
                         return "[name].css";
                     }
                     return "[name][extname]";
