@@ -21,8 +21,8 @@ class AdminController {
 	public function add_menu_page() {
 		add_submenu_page(
 			'woocommerce',
-			'Badges Settings',
-			'Badges Settings',
+			esc_html__( 'Badges Settings', 'wp-vite-shadcn-tailwindcss-typescript' ),
+			esc_html__( 'Badges Settings', 'wp-vite-shadcn-tailwindcss-typescript' ),
 			'manage_options',
 			Config::MENU_PAGE_SLUG,
 			[ $this, 'render_custom_page_callback' ]
@@ -39,7 +39,9 @@ class AdminController {
 		wp_enqueue_style( 'wpvstt-settings' );
 		wp_localize_script( 'wpvstt-settings', 'wpvstt_settings', Fns::get_options() );
 		?>
-		<div id="wpvstt-settings">Hello</div>
+		<div id="wpvstt-settings">
+            <?php echo esc_html__( 'Hello', 'wp-vite-shadcn-tailwindcss-typescript' ); ?>
+        </div>
 		<?php
 	}
 }
