@@ -27,7 +27,8 @@
     "react-router-dom": "^7.9.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.12",
-    "zustand": "^5.0.8"
+    "zustand": "^5.0.8",
+    "vite-plugin-static-copy": "^3.1.4"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
@@ -40,7 +41,6 @@
     "cli-color": "^2.0.4",
     "cross-env": "^10.1.0",
     "emojic": "^1.1.18",
-    "fs-extra": "^11.3.2",
-    "vite-plugin-static-copy": "^3.1.4"
+    "fs-extra": "^11.3.2"
   }
 }

@@ -1,17 +1,17 @@
 <?php
 /**
- * Plugin Name: Vite shadcn tailwindcss typescript zustand
- * Plugin URI: #
- * Description: Vite shadcn tailwindcss typescript
+ * Plugin Name: Vite Shadcn tailwindcss typescript zustand
+ * Plugin URI: https://github.com/mamunur105/wp-vite-shadcn-tailwindcss-typescript
+ * Description: Vite Shadcn tailwindcss typescript
  * Version: 0.0.1
- * Author: wptinysolution
- * Text Domain: badges-for-woo
- * Author URI: https://github.com/wptinysolution
+ * Author: Mamunur Rashid
+ * Text Domain: wp-vite-shadcn-tailwindcss-typescript
+ * Author URI: https://profiles.wordpress.org/mamunur105/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-use WPVSTT\BadgesForWoo;
+use WPVSTT\WPVSTT_Main;
 
 define( 'WPVSTT_VERSION', '0.0.1' );
 
@@ -35,10 +35,10 @@ define( 'WPVSTT_FILE_PATH', plugin_dir_path( __FILE__ ) );
 require_once WPVSTT_FILE_PATH . 'vendor/autoload.php';
 
 /**
- * @return BadgesForWoo
+ * @return WPVSTT_Main
  */
 function WPVSTT_main() {
-	return BadgesForWoo::instance();
+	return WPVSTT_Main::instance();
 }
 
 add_action( 'plugins_loaded', 'WPVSTT_main' );

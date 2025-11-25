@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main initialization class.
  */
-final class BadgesForWoo {
+final class WPVSTT_Main {
 	/**
 	 * Post Type.
 	 *
