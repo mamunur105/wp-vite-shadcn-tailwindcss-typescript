@@ -3,11 +3,29 @@ import path from "path";
 import cliColor from "cli-color";
 import emojic from "emojic";
 import archiver from "archiver";
-
+import wpPot from 'wp-pot';
 // Dynamic paths
 const packagePath = path.resolve("./"); // plugin root
 const packageSlug = path.basename(packagePath);
 const distDir = path.join(packagePath, "dist");
+
+
+/**
+ * Extract version from plugin main file
+ */
+async function generatePot() {
+    let languages = path.resolve("languages");
+    fs.ensureDir(languages, function (err) {
+        if (err) return console.error(err); // if file or folder does not exist
+        wpPot({
+            package: "Vite Shadcn tailwindcss typescript zustand",
+            bugReport: "",
+            src: "**/*.php",
+            domain: packageSlug,
+            destFile: `languages/${packageSlug}.pot`,
+        });
+    });
+}
 
 // Files/folders to include in final package
 const includes = [
@@ -44,6 +62,7 @@ async function getVersion() {
  * Copy selected files/folders to dist/plugin-name
  */
 async function runPackage() {
+    await generatePot();
     // Ensure main dist folder exists
     await fs.ensureDir(distDir);
 
