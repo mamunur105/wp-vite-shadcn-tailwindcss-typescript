@@ -18,7 +18,7 @@ const SwitchField: React.FC<SwitchFieldProps> = (props) => {
     };
     return (
         <FieldWrapper label={label} desc={desc} type={type}>
-            <Switch name={name} checked={value} onCheckedChange={handleToggle} />
+            <Switch className={'data-[state=unchecked]:bg-[#ccc] data-[state=checked]:bg-[#5d3dfd] h-6 w-12 [&>span]:data-[state=unchecked]:translate-x-1 [&>span]:data-[state=checked]:translate-x-7'} name={name} checked={value} onCheckedChange={handleToggle} />
         </FieldWrapper>
     );
 };
