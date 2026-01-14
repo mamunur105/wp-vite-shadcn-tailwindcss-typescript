@@ -1,5 +1,5 @@
 {
-    "name": "tinysolutions/badges-for-woo",
+    "name": "tinysolutions/example-for-woo",
     "autoload": {
         "psr-4": {
             "WPVSTT\\": "main"
