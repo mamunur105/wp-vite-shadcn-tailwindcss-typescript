@@ -7,20 +7,24 @@ import type { Plugin } from "vite";
 import type { OutputBundle } from "rollup";
 
 /**
- * Rollup/Vite plugin to wrap a specific JS file in an IIFE after build.
- * @param targetFile - file name in output to wrap (e.g., "js/settings.js")
+ * Wraps one or more specific JS files in an IIFE.
+ * @param targetFiles - A string or array of strings representing file names in the bundle
  */
-export function wrapSpecificFileInIIFE(targetFile: string): Plugin {
+export function wrapSpecificFilesInIIFE(targetFiles: string | string[]): Plugin {
+    const files = Array.isArray(targetFiles) ? targetFiles : [targetFiles];
     return {
-        name: "wrap-specific-file-in-iife",
+        name: "wrap-specific-files-in-iife",
         generateBundle(_options: unknown, bundle: OutputBundle) {
-            const chunk = bundle[targetFile];
-            if (chunk && chunk.type === "chunk") {
-                chunk.code = `(function(){\n${chunk.code}\n})();`;
+            for (const file of files) {
+                const chunk = bundle[file];
+                if (chunk && chunk.type === "chunk") {
+                    chunk.code = `(() => {${chunk.code}})();`;
+                }
             }
         },
     };
 }
+
 export default defineConfig({
     plugins: [
         react(),
@@ -33,7 +37,7 @@ export default defineConfig({
                 },
             ],
         }),
-        wrapSpecificFileInIIFE("admin/js/settings"),
+        wrapSpecificFilesInIIFE(["admin/js/settings"]),
     ],
     build: {
         outDir: 'assets', // compiled files output
