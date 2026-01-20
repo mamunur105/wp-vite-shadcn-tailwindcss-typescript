@@ -1,12 +1,26 @@
-// @ts-ignore
 import path from "path"
-// @ts-ignore
 import tailwindcss from "@tailwindcss/vite";
-// @ts-ignore
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import type { Plugin } from "vite";
+import type { OutputBundle } from "rollup";
 
+/**
+ * Rollup/Vite plugin to wrap a specific JS file in an IIFE after build.
+ * @param targetFile - file name in output to wrap (e.g., "js/settings.js")
+ */
+export function wrapSpecificFileInIIFE(targetFile: string): Plugin {
+    return {
+        name: "wrap-specific-file-in-iife",
+        generateBundle(_options: unknown, bundle: OutputBundle) {
+            const chunk = bundle[targetFile];
+            if (chunk && chunk.type === "chunk") {
+                chunk.code = `(function(){\n${chunk.code}\n})();`;
+            }
+        },
+    };
+}
 export default defineConfig({
     plugins: [
         react(),
@@ -19,6 +33,7 @@ export default defineConfig({
                 },
             ],
         }),
+        wrapSpecificFileInIIFE("admin/js/settings"),
     ],
     build: {
         outDir: 'assets', // compiled files output
