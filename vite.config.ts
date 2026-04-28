@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import type { Plugin } from "vite";
-import type { OutputBundle } from "rollup";
+import type {OutputBundle} from "rolldown";
 
 /**
  * Wraps one or more specific JS files in an IIFE.
@@ -42,6 +42,10 @@ export default defineConfig({
     build: {
         outDir: 'assets', // compiled files output
         rollupOptions: {
+            onwarn(warning, warn) {
+                if (warning.code === 'FILE_NAME_CONFLICT') return;
+                warn(warning);
+            },
             input: {
                 'admin/js/settings': path.resolve(__dirname, 'src/admin/adminSettings.tsx'),
                 'frontend/js/frontend': path.resolve(__dirname, 'src/frontend/js/frontend.js'),
