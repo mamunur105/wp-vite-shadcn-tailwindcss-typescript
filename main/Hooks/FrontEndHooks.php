@@ -26,5 +26,15 @@ class FrontEndHooks {
 	 * @return void
 	 */
 	public function frontendmenu() {
+		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_frontend_assets' ] );
+	}
+
+	/**
+	 * Enqueue frontend assets.
+	 *
+	 * @return void
+	 */
+	public function enqueue_frontend_assets() {
+		wp_enqueue_style( 'wpvstt-frontend' );
 	}
 }
