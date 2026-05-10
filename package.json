@@ -9,8 +9,8 @@
     "watch": "vite build --watch",
     "clean": "rimraf dist languages",
     "make-pot": "npm run clean && wp i18n make-pot . languages/wp-vite-shadcn-tailwindcss-typescript.pot --exclude=node_modules,assets,dist,src,vendor",
-    "package": "npm run make-pot && cross-env NODE_ENV=package node build.js",
-    "zip": "npm run make-pot && cross-env NODE_ENV=zip node build.js"
+    "package": "npm run make-pot && cross-env NODE_ENV=package node devTools/build.js",
+    "zip": "npm run make-pot && cross-env NODE_ENV=zip node devTools/build.js"
   },
   "dependencies": {
     "@radix-ui/react-menubar": "^1.1.16",

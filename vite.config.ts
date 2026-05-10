@@ -3,27 +3,8 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import { viteStaticCopy } from "vite-plugin-static-copy";
-import type { Plugin } from "vite";
-import type {OutputBundle} from "rolldown";
-
-/**
- * Wraps one or more specific JS files in an IIFE.
- * @param targetFiles - A string or array of strings representing file names in the bundle
- */
-export function wrapSpecificFilesInIIFE(targetFiles: string | string[]): Plugin {
-    const files = Array.isArray(targetFiles) ? targetFiles : [targetFiles];
-    return {
-        name: "wrap-specific-files-in-iife",
-        generateBundle(_options: unknown, bundle: OutputBundle) {
-            for (const file of files) {
-                const chunk = bundle[file];
-                if (chunk && chunk.type === "chunk") {
-                    chunk.code = `(() => {${chunk.code}})();`;
-                }
-            }
-        },
-    };
-}
+import { cssSourceMap } from "./devTools/vitePlugin/cssSourceMap";
+import { wrapSpecificFilesInIIFE } from "./devTools/vitePlugin/wrapIIFE";
 
 export default defineConfig({
     plugins: [
@@ -38,6 +19,10 @@ export default defineConfig({
             ],
         }),
         wrapSpecificFilesInIIFE(["admin/js/settings"]),
+        cssSourceMap({
+            "frontend/css/frontend": "src/frontend/css/frontend.scss",
+            "admin/css/product_badge": "src/admin/css/product_badge.scss",
+        }),
     ],
     build: {
         sourcemap: true,

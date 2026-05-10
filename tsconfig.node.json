@@ -13,5 +13,5 @@
     "strict": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "devTools/**/*.ts"]
 }
