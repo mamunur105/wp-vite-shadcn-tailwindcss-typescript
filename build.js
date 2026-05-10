@@ -57,7 +57,9 @@ async function runPackage() {
         const to = path.join(destination, item);
 
         try {
-            await fs.copy(from, to);
+            await fs.copy(from, to, {
+                filter: (src) => !src.endsWith(".map"),
+            });
             console.log(cliColor.white(`=> ${emojic.smiley}  ${item} copied...`));
         } catch (err) {
             console.error(`Copy failed for ${item}:`, err);

@@ -40,6 +40,7 @@ export default defineConfig({
         wrapSpecificFilesInIIFE(["admin/js/settings"]),
     ],
     build: {
+        sourcemap: true,
         outDir: 'assets', // compiled files output
         rollupOptions: {
             onwarn(warning, warn) {
