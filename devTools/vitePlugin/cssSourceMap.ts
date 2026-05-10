@@ -37,6 +37,7 @@ export function cssSourceMap(scssEntries: Record<string, string> = {}): Plugin {
                     const result = sass.compile(path.resolve(scssSrc), {
                         sourceMap: true,
                         sourceMapIncludeSources: true,
+                        style: "compressed",
                     });
 
                     if (result.sourceMap) {
