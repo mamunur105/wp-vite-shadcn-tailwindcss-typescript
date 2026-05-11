@@ -1,0 +1,1348 @@
+
+h2{
+    color:red !important;
+}
+
+:root {
+    --rtfm-primary-color: #fc202e;
+    --rtfm-primary-dark: #E11D2A;
+    --rtfm-primary-soft: #fff7f7;
+    --rtfm-offset-color: #f8f8f8;
+    --rtfm-text-color: #333
+}
+
+.fmp-wrapper *, .fmp-wrapper *::before, .fmp-wrapper *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.fmp-wrapper[id*=fmp-container-] a {
+    outline: 0
+}
+
+.fmp-wrapper[id*=fmp-container-] h3 > a {
+    display: inline;
+    padding-bottom: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(currentcolor), color-stop(98%, currentcolor));
+    background-image: linear-gradient(to bottom, currentcolor 0%, currentcolor 98%);
+    background-size: 0 2px;
+    background-repeat: no-repeat;
+    background-position: left 100%;
+    -webkit-transition: background-size .5s;
+    transition: background-size .5s
+}
+
+.fmp-wrapper[id*=fmp-container-] h3 > a:hover {
+    background-size: 100% 2px
+}
+
+.fmp-wrapper .img-responsive.swiper-lazy:not(.swiper-lazy-loaded) {
+    visibility: hidden;
+    opacity: 0
+}
+
+.fmp-wrapper .swiper-lazy-preloader {
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    margin-top: -15px;
+    border-width: 2px;
+    border-color: var(--rtfm-primary-color);
+    border-top-color: rgba(0, 0, 0, 0)
+}
+
+.fmp #fmp-description {
+    margin: 0;
+    float: none;
+    width: inherit
+}
+
+.fmp-single-food-img-wrapper {
+    text-align: center
+}
+
+@media only screen and (max-width: 767px) {
+    .fmp-wrapper:not(.has-mobile-title) .fmp-box .fmp-title h3, .fmp-wrapper:not(.has-mobile-title) .fmp-food-item .fmp-title h3 {
+        display: none !important
+    }
+
+    .fmp-wrapper:not(.has-mobile-title) .fmp-box .fmp-media-body .fmp-title {
+        display: none !important
+    }
+
+    .fmp-wrapper:not(.has-mobile-title) .fmp-box .menu-list .fmp-title {
+        display: none !important
+    }
+
+    .fmp-wrapper:not(.has-mobile-image) .fmp-image-wrap {
+        display: none !important
+    }
+
+    .fmp-wrapper:not(.has-mobile-price) .fmp-box .price, .fmp-wrapper:not(.has-mobile-price) .fmp-food-item .price {
+        display: none !important
+    }
+
+    .fmp-wrapper:not(.has-mobile-price) .fmp-box-wrapper .fmp-price-wrapper {
+        display: none !important
+    }
+
+    .fmp-wrapper:not(.has-mobile-excerpt) .fmp-box .fmp-body, .fmp-wrapper:not(.has-mobile-excerpt) .fmp-food-item .fmp-body {
+        display: none !important
+    }
+
+    .fmp-wrapper:not(.has-mobile-excerpt) .fmp-box .info-part > p, .fmp-wrapper:not(.has-mobile-excerpt) .fmp-box .fmp-media-body > p, .fmp-wrapper:not(.has-mobile-excerpt) .fmp-box .fmp-content > p, .fmp-wrapper:not(.has-mobile-excerpt) .fmp-box .fmp-info > p {
+        display: none !important
+    }
+
+    .fmp-wrapper:not(.has-mobile-excerpt) .fmp-box > ul > li > p {
+        display: none !important
+    }
+}
+
+@font-face {
+    font-family: "FoodMenuPro";
+    src: url("../fonts/FoodMenuPro.eot");
+    src: url("../fonts/FoodMenuPro.eot?#iefix") format("embedded-opentype"), url("../fonts/FoodMenuPro.woff") format("woff"), url("../fonts/FoodMenuPro.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+
+span.fmp-price del {
+    margin-right: 8px
+}
+
+span.fmp-price ins {
+    background: rgba(0, 0, 0, 0)
+}
+
+.fmp-media:after {
+    clear: both;
+    display: block;
+    content: ""
+}
+
+.fmp-media .fmp-pull-left {
+    padding-right: 10px;
+    float: left !important
+}
+
+.fmp-media-body {
+    display: table-cell;
+    vertical-align: top;
+    width: 10000px;
+    overflow: hidden;
+    zoom: 1
+}
+
+.fmp .fmp-iso-filter {
+    text-align: center;
+    margin: 15px 0;
+    margin-bottom: 40px
+}
+
+.fmp .fmp-utility {
+    text-align: center
+}
+
+.fmp-isotope-layout {
+    display: block !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important
+}
+
+.fmp-isotope-layout > .fmp-isotope {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+.fmp-read-more-active .fmp-footer {
+    margin-top: 15px
+}
+
+.fmp-wrapper .fmp-no-margin {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.fmp-wrapper .fmp-no-margin .no-margin {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.fmp-wrapper .fmp-no-margin .no-margin .fmp-box, .fmp-wrapper .fmp-no-margin .no-margin .fmp-food-item {
+    margin-bottom: 0
+}
+
+.fmp-wrapper .fmp-no-margin.fmp-isotope-layout > .fmp-isotope {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.fmp-carousel [class^=fmp-col-] {
+    -ms-flex-preferred-size: initial;
+    flex-basis: initial;
+    max-width: initial
+}
+
+#fmp-slide-wrapper .rtfm-carousel-thumb .swiper-slide::before, #fmp-slide-wrapper .rtfm-carousel-main .swiper-button-next, #fmp-slide-wrapper .rtfm-carousel-main .swiper-button-prev, .fmp-wrapper .fmp-tabs > li, .fmp-layout5 .fmp-box, .fmp-layout2 .fmp-box .fmp-content .fmp-title:before, .fmp-layout1 .fmp-price-wrapper span.fmp-price, .fmp-cat2 .fmp-title, .fmp-cat1 .fmp-media-body .fmp-title, .fmp-cat1 .fmp-media .fmp-image::before, .fmp-grid-by-cat-free-3 .fmp-grids-wrapper .fmp-col-xs-12 .fmp-food-item, .fmp-layout-free-3 .fmp-food-item, .fmp-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-quantity-wrap .input-group-btn .quantity-btn, #fmp-location-modal .fmp-save-option, #fmp-location-modal .fmp-close, #fmp-location-modal .fmp-location, .fmp-pagination ul.pagination-list li span, .fmp-pagination ul.pagination-list li a, .fmp-wrapper .fmp-image-wrap > a::before, .fmp-carousel .swiper-arrow::before, .fmp-iso-filter.type-3 button::before, .fmp-iso-filter.type-2 button::before, .fmp-iso-filter.type-1 button::before, .fmp-btn-read-more::before, .fmp-load-more::before, .fmp-menu-popup a.fmp-btn::before, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn::before, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button::before, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn::before, .fmp-wrapper .fmp-food-item.product a.button::before, .fmp-carousel .swiper-arrow::after, .fmp-iso-filter.type-3 button::after, .fmp-iso-filter.type-2 button::after, .fmp-iso-filter.type-1 button::after, .fmp-btn-read-more::after, .fmp-load-more::after, .fmp-menu-popup a.fmp-btn::after, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn::after, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button::after, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn::after, .fmp-wrapper .fmp-food-item.product a.button::after {
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.fmp-wrapper[id*=fmp-container-] a {
+    -webkit-transition: none;
+    transition: none
+}
+
+.fmp-wrapper[id*=fmp-container-] a {
+    text-decoration: none
+}
+
+.fmp-box .fmp-title h3.no-link:hover, .fmp-box .fmp-title h3.no-link:focus, .fmp-food-item .fmp-title h3.no-link:hover, .fmp-food-item .fmp-title h3.no-link:focus, .fmp-wrapper[id*=fmp-container-] a, .fmp-wrapper[id*=fmp-container-] a:hover {
+    color: inherit
+}
+
+.rt-d-flex, .fmp-layout4 .fmp-box .fmp-media, .fmp-layout1 .fmp-price-wrapper span.fmp-price, .fmp-layout-free-2 .fmp-food-item .fmp-footer.read-more-active, [class*=fmp-layout-free] .fmp-food-item .fmp-footer.woo-template, [class*=grid-by-cat-free] .fmp-food-item .fmp-footer.woo-template, .fmp-pagination ul.pagination-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.rt-flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.rt-justify-content-center, .fmp-layout1 .fmp-price-wrapper span.fmp-price, .fmp-archive .fmp-image-wrap.no-thumbnail, .fmp-pagination ul.pagination-list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.rt-align-items-center, [class*=fmp-layout-free] .fmp-food-item .fmp-footer.woo-template, [class*=grid-by-cat-free] .fmp-food-item .fmp-footer.woo-template, .fmp-pagination ul.pagination-list {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.rt-pos-s, .fmp-wrapper > [class*=fmp-carousel].fmp-pre-loader {
+    position: static !important
+}
+
+.rt-pos-r, #fmp-slide-wrapper .rtfm-carousel-thumb .swiper-slide, .fmp-wrapper .fmp-tab-panel-ingredient ul li, .fmp-wrapper .fmp-tab-panel-nutrition ul li, .fmp-layout8 .fmp-box-wrapper .fmp-price-wrapper.is-variable .fmp-price, .fmp-layout8 .fmp-box-wrapper .fmp-price-wrapper .fmp-price .woocommerce-Price-amount, .fmp-layout8 .fmp-box-wrapper .fmp-price-wrapper .fmp-price .fmp-price-amount, .fmp-layout8 .fmp-box-wrapper, .fmp-layout7 .fmp-box-wrapper .fmp-price-wrapper.is-variable .fmp-price, .fmp-layout7 .fmp-box-wrapper .fmp-price-wrapper:not(.is-variable) .fmp-price .woocommerce-Price-amount, .fmp-layout7 .fmp-box-wrapper .fmp-price-wrapper:not(.is-variable) .fmp-price .fmp-price-amount, .fmp-layout7 .fmp-box-wrapper, .fmp-layout4 .fmp-box .fmp-media-body .fmp-title, .fmp-layout4 .fmp-box .fmp-media, .fmp-layout3 .fmp-info .fmp-title, .fmp-cat2 .fmp-title-price, .fmp-cat1 .fmp-media .fmp-image, .fmp-single-food h2, .fmp-grid-by-cat-free-2 .fmp-category-background, .fmp-ball-clip-rotate > div, .fmp-ball-clip-rotate, .fmp-wrapper .fmp-pre-loader, .fmp-wrapper .fmp-image-wrap > a, .fmp-carousel .swiper-arrow, .fmp-iso-filter.type-3 button, .fmp-iso-filter.type-2 button, .fmp-iso-filter.type-1 button, .fmp-btn-read-more, .fmp-load-more, .fmp-menu-popup a.fmp-btn, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn, .fmp-wrapper .fmp-food-item.product a.button {
+    position: relative
+}
+
+.rt-default-gutter, .fmp-food-item, .fmp .fmp-summery, .fmp .fmp-images {
+    margin-bottom: 30px
+}
+
+.rt-gutter-half {
+    margin-top: 15px;
+    margin-bottom: 15px
+}
+
+.rt-primary-color, .fmp-wrapper .fmp-tab-panel-ingredient ul li::before, .fmp-wrapper .fmp-tab-panel-nutrition ul li::before, .fmp-wrapper .fmp-tabs > li, .fmp-single-food .offers, .fmp-price-listing tr > td:last-child, .fmp-cat2 .fmp-title:hover, .fmp-cat1 .fmp-media-body .fmp-title:hover, .fmp-cat1 .fmp-media-body .fmp-title:focus, .fmp-popup-container .fmp-price-listing tr > td:last-child, .fmp-wrapper .fmp-loading, .fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-1, .fmp-box .price, .fmp-food-item .price, .fmp-box .fmp-title h3:hover, .fmp-box .fmp-title h3:focus, .fmp-food-item .fmp-title h3:hover, .fmp-food-item .fmp-title h3:focus {
+    color: var(--rtfm-primary-color)
+}
+
+.rt-primary-color-bg, .fmp-wrapper .fmp-tabs > li.active, .fmp-layout2 .fmp-box .fmp-img-wrapper a i, .fmp-cat1 .fmp-cat-title h2:after, .fmp-single-food h2::before, .fmp-wrapper .fmp-carousel .swiper-pagination-bullet-active, .fmp-wrapper .fmp-carousel .swiper-pagination-bullet:hover, .fmp-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-quantity-wrap .input-group-btn .quantity-btn:hover, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn + .added_to_cart, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button + .added_to_cart, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn + .added_to_cart, .fmp-wrapper .fmp-food-item.product a.button + .added_to_cart, [class*=grid-by-cat-free] .fmp-category-title-wrapper.type-2 .fmp-category-title::before {
+    background-color: var(--rtfm-primary-color)
+}
+
+.rt-offset-color-bg, .fmp-grid-by-cat-free-5 .fmp-row .fmp-food-item, .fmp-food-item {
+    background-color: var(--rtfm-offset-color)
+}
+
+.rt-white-color, .fmp-wrapper .fmp-tabs > li.active, .fmp-layout8 .fmp-box-wrapper .fmp-price-wrapper.is-variable .fmp-price, .fmp-layout8 .fmp-box-wrapper .fmp-price-wrapper.is-sale:not(.is-variable) .fmp-price > del, .fmp-layout8 .fmp-box-wrapper .fmp-price-wrapper .fmp-price .woocommerce-Price-amount, .fmp-layout8 .fmp-box-wrapper .fmp-price-wrapper .fmp-price .fmp-price-amount, .fmp-layout7 .fmp-box-wrapper .fmp-price-wrapper.is-variable .fmp-price, .fmp-layout7 .fmp-box-wrapper .fmp-price-wrapper:not(.is-variable).is-sale .fmp-price > del, .fmp-layout7 .fmp-box-wrapper .fmp-price-wrapper:not(.is-variable) .fmp-price .woocommerce-Price-amount, .fmp-layout7 .fmp-box-wrapper .fmp-price-wrapper:not(.is-variable) .fmp-price .fmp-price-amount, .fmp-layout1 .fmp-title h3, .fmp-layout1 .fmp-box .fmp-title .fmp-wc-view-cart, .fmp-layout1 .fmp-box .fmp-title p, .fmp-layout1 .fmp-box .fmp-title h3, .fmp-cat2 .fmp-cat-title h2, .fmp-carousel .swiper-arrow, .fmp-iso-filter.type-2 button.selected, .fmp-iso-filter.type-1 button:hover, .fmp-iso-filter.type-1 button:focus, .fmp-iso-filter.type-1 button.selected, .fmp-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-quantity-wrap .input-group-btn .quantity-btn:hover, .fmp-ball-clip-rotate, .fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-1:hover, [class*=grid-by-cat-free] .fmp-category-title-wrapper.type-3 .fmp-category-title {
+    color: #fff
+}
+
+.rt-white-color-bg, .fmp-cat1 .fmp-media .fmp-image .fmp-image-icon, .fmp-wrapper .fmp-image-wrap > a .fmp-image-icon {
+    background-color: #fff
+}
+
+.rt-mb-0, #fmp-summery, .fmp-layout1 .fmp-box .fmp-title, .fmp-grid-item .fmp-box .fmp-info p:last-child, .fmp-cat2 .fmp-cat-title h2, .fmp-cat2 .fmp-box ul.menu-list li h3.fmp-title, .fmp-grid-item .fmp-cat1 .fmp-box, .fmp-cat1 .fmp-media-body p:last-child, .fmp-cat1 .fmp-media-body .fmp-title, .fmp-cat1 .fmp-box ul.menu-list li:last-child, .fmp-cat1 .fmp-box ul.menu-list, .widget_fmp .fmp-wrapper .fmp-layout-free .fmp-title, .widget_fmp .fmp-wrapper .fmp-grid-by-cat-free .fmp-title, .fmp-grid-by-cat-free-2 .fmp-category-background:last-child, [class*=fmp-layout-free] .fmp-content-wrap p, [class*=grid-by-cat-free] .fmp-content-wrap p, [class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title, .fmp-box .fmp-title h3, .fmp-food-item .fmp-title h3, .fmp-body p:last-child {
+    margin-bottom: 0
+}
+
+.rt-pb-0, .fmp-single-food ul, .fmp-box .fmp-title h3, .fmp-food-item .fmp-title h3 {
+    padding-bottom: 0
+}
+
+.fmp-row [class^=fmp-col-], .fmp-row [class^=tlp-col-], .fmp-wrapper.fmp-container, .fmp-wrapper.fmp-container-fluid {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.fmp-cat1 .fmp-media-body .fmp-title, .fmp-box .fmp-title h3, .fmp-food-item .fmp-title h3 {
+    font-size: 22px
+}
+
+.fmp-carousel .swiper-arrow, .fmp-iso-filter.type-3 button, .fmp-iso-filter.type-2 button, .fmp-iso-filter.type-1 button, .fmp-btn-read-more, .fmp-load-more, .fmp-menu-popup a.fmp-btn, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn, .fmp-wrapper .fmp-food-item.product a.button {
+    padding: 0 15px;
+    line-height: 1.4;
+    text-decoration: none;
+    min-height: 40px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 200px;
+    min-width: 120px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 1;
+    background: none;
+    border-radius: 3px;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    border: 0;
+    vertical-align: top;
+    z-index: 1
+}
+
+.fmp-carousel .swiper-arrow::before, .fmp-iso-filter.type-3 button::before, .fmp-iso-filter.type-2 button::before, .fmp-iso-filter.type-1 button::before, .fmp-btn-read-more::before, .fmp-load-more::before, .fmp-menu-popup a.fmp-btn::before, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn::before, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button::before, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn::before, .fmp-wrapper .fmp-food-item.product a.button::before, .fmp-carousel .swiper-arrow::after, .fmp-iso-filter.type-3 button::after, .fmp-iso-filter.type-2 button::after, .fmp-iso-filter.type-1 button::after, .fmp-btn-read-more::after, .fmp-load-more::after, .fmp-menu-popup a.fmp-btn::after, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn::after, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button::after, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn::after, .fmp-wrapper .fmp-food-item.product a.button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 3px
+}
+
+.fmp-carousel .swiper-arrow::before, .fmp-iso-filter.type-3 button::before, .fmp-iso-filter.type-2 button::before, .fmp-iso-filter.type-1 button::before, .fmp-btn-read-more::before, .fmp-load-more::before, .fmp-menu-popup a.fmp-btn::before, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn::before, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button::before, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn::before, .fmp-wrapper .fmp-food-item.product a.button::before {
+    background: linear-gradient(94.5deg, var(--rtfm-primary-color) 16.12%, var(--rtfm-primary-dark) 58.97%);
+    opacity: 1;
+    z-index: -1
+}
+
+.fmp-carousel .swiper-arrow::after, .fmp-iso-filter.type-3 button::after, .fmp-iso-filter.type-2 button::after, .fmp-iso-filter.type-1 button::after, .fmp-btn-read-more::after, .fmp-load-more::after, .fmp-menu-popup a.fmp-btn::after, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn::after, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button::after, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn::after, .fmp-wrapper .fmp-food-item.product a.button::after {
+    background: linear-gradient(94.5deg, var(--rtfm-primary-dark) 16.12%, color-mix(in srgb, var(--rtfm-primary-dark) 85%, #000) 58.97%);
+    z-index: -2
+}
+
+.fmp-carousel .loading.swiper-arrow, .fmp-iso-filter.type-3 button.loading, .fmp-iso-filter.type-2 button.loading, .fmp-iso-filter.type-1 button.loading, .loading.fmp-btn-read-more, .loading.fmp-load-more, .fmp-menu-popup a.loading.fmp-btn, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .loading.fmp-wc-add-to-cart-btn, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.loading.button, .fmp-wrapper .fmp-food-item.product .loading.fmp-wc-add-to-cart-btn, .fmp-wrapper .fmp-food-item.product a.loading.button {
+    background: linear-gradient(94.5deg, var(--rtfm-primary-dark) 16.12%, var(--rtfm-primary-color) 58.97%)
+}
+
+.fmp-carousel .swiper-arrow:hover, .fmp-iso-filter.type-3 button:hover, .fmp-iso-filter.type-2 button:hover, .fmp-iso-filter.type-1 button:hover, .fmp-btn-read-more:hover, .fmp-load-more:hover, .fmp-menu-popup a.fmp-btn:hover, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn:hover, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button:hover, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn:hover, .fmp-wrapper .fmp-food-item.product a.button:hover {
+    color: #fff
+}
+
+.fmp-carousel .swiper-arrow:hover::before, .fmp-iso-filter.type-3 button:hover::before, .fmp-iso-filter.type-2 button:hover::before, .fmp-iso-filter.type-1 button:hover::before, .fmp-btn-read-more:hover::before, .fmp-load-more:hover::before, .fmp-menu-popup a.fmp-btn:hover::before, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn:hover::before, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button:hover::before, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn:hover::before, .fmp-wrapper .fmp-food-item.product a.button:hover::before {
+    opacity: 0
+}
+
+.fmp-price-with-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 15px
+}
+
+.fmp-col-xs-1, .tlp-col-xs-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.3333333333%;
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%
+}
+
+.fmp-col-xs-2, .tlp-col-xs-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%
+}
+
+.fmp-col-xs-3, .tlp-col-xs-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%
+}
+
+.fmp-col-xs-4, .tlp-col-xs-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%
+}
+
+.fmp-col-xs-5, .tlp-col-xs-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.6666666667%;
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%
+}
+
+.fmp-col-xs-6, .tlp-col-xs-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%
+}
+
+.fmp-col-xs-7, .tlp-col-xs-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.3333333333%;
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%
+}
+
+.fmp-col-xs-8, .tlp-col-xs-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.6666666667%;
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%
+}
+
+.fmp-col-xs-9, .tlp-col-xs-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%
+}
+
+.fmp-col-xs-10, .tlp-col-xs-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.3333333333%;
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%
+}
+
+.fmp-col-xs-11, .tlp-col-xs-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.6666666667%;
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%
+}
+
+.fmp-col-xs-12, .tlp-col-xs-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+.fmp-col-xs-2, .tlp-col-xs-24 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%
+}
+
+@media only screen and (min-width: 768px) {
+    .fmp-container {
+        max-width: 750px
+    }
+
+    .fmp-col-sm-24, .tlp-col-sm-24 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%
+    }
+
+    .fmp-col-sm-1, .tlp-col-sm-1 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 8.3333333333%;
+        flex: 0 0 8.3333333333%;
+        max-width: 8.3333333333%
+    }
+
+    .fmp-col-sm-2, .tlp-col-sm-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.6666666667%;
+        flex: 0 0 16.6666666667%;
+        max-width: 16.6666666667%
+    }
+
+    .fmp-col-sm-3, .tlp-col-sm-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+
+    .fmp-col-sm-4, .tlp-col-sm-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3333333333%;
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%
+    }
+
+    .fmp-col-sm-5, .tlp-col-sm-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.6666666667%;
+        flex: 0 0 41.6666666667%;
+        max-width: 41.6666666667%
+    }
+
+    .fmp-col-sm-6, .tlp-col-sm-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+
+    .fmp-col-sm-7, .tlp-col-sm-7 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.3333333333%;
+        flex: 0 0 58.3333333333%;
+        max-width: 58.3333333333%
+    }
+
+    .fmp-col-sm-8, .tlp-col-sm-8 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.6666666667%;
+        flex: 0 0 66.6666666667%;
+        max-width: 66.6666666667%
+    }
+
+    .fmp-col-sm-9, .tlp-col-sm-9 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+
+    .fmp-col-sm-10, .tlp-col-sm-10 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.3333333333%;
+        flex: 0 0 83.3333333333%;
+        max-width: 83.3333333333%
+    }
+
+    .fmp-col-sm-11, .tlp-col-sm-11 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 91.6666666667%;
+        flex: 0 0 91.6666666667%;
+        max-width: 91.6666666667%
+    }
+
+    .fmp-col-sm-12, .tlp-col-sm-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .fmp-container {
+        max-width: 970px
+    }
+
+    .fmp-col-md-24, .tlp-col-md-24 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%
+    }
+
+    .fmp-col-md-1, .tlp-col-md-1 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 8.3333333333%;
+        flex: 0 0 8.3333333333%;
+        max-width: 8.3333333333%
+    }
+
+    .fmp-col-md-2, .tlp-col-md-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.6666666667%;
+        flex: 0 0 16.6666666667%;
+        max-width: 16.6666666667%
+    }
+
+    .fmp-col-md-3, .tlp-col-md-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+
+    .fmp-col-md-4, .tlp-col-md-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3333333333%;
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%
+    }
+
+    .fmp-col-md-5, .tlp-col-md-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.6666666667%;
+        flex: 0 0 41.6666666667%;
+        max-width: 41.6666666667%
+    }
+
+    .fmp-col-md-6, .tlp-col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+
+    .fmp-col-md-7, .tlp-col-md-7 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.3333333333%;
+        flex: 0 0 58.3333333333%;
+        max-width: 58.3333333333%
+    }
+
+    .fmp-col-md-8, .tlp-col-md-8 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.6666666667%;
+        flex: 0 0 66.6666666667%;
+        max-width: 66.6666666667%
+    }
+
+    .fmp-col-md-9, .tlp-col-md-9 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+
+    .fmp-col-md-10, .tlp-col-md-10 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.3333333333%;
+        flex: 0 0 83.3333333333%;
+        max-width: 83.3333333333%
+    }
+
+    .fmp-col-md-11, .tlp-col-md-11 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 91.6666666667%;
+        flex: 0 0 91.6666666667%;
+        max-width: 91.6666666667%
+    }
+
+    .fmp-col-md-12, .tlp-col-md-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .fmp-container {
+        max-width: 1170px
+    }
+
+    .fmp-col-lg-24, .tlp-col-lg-24 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%
+    }
+
+    .fmp-col-lg-1, .tlp-col-lg-1 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 8.3333333333%;
+        flex: 0 0 8.3333333333%;
+        max-width: 8.3333333333%
+    }
+
+    .fmp-col-lg-2, .tlp-col-lg-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 16.6666666667%;
+        flex: 0 0 16.6666666667%;
+        max-width: 16.6666666667%
+    }
+
+    .fmp-col-lg-3, .tlp-col-lg-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+
+    .fmp-col-lg-4, .tlp-col-lg-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3333333333%;
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%
+    }
+
+    .fmp-col-lg-5, .tlp-col-lg-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.6666666667%;
+        flex: 0 0 41.6666666667%;
+        max-width: 41.6666666667%
+    }
+
+    .fmp-col-lg-6, .tlp-col-lg-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+
+    .fmp-col-lg-7, .tlp-col-lg-7 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 58.3333333333%;
+        flex: 0 0 58.3333333333%;
+        max-width: 58.3333333333%
+    }
+
+    .fmp-col-lg-8, .tlp-col-lg-8 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.6666666667%;
+        flex: 0 0 66.6666666667%;
+        max-width: 66.6666666667%
+    }
+
+    .fmp-col-lg-9, .tlp-col-lg-9 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+
+    .fmp-col-lg-10, .tlp-col-lg-10 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 83.3333333333%;
+        flex: 0 0 83.3333333333%;
+        max-width: 83.3333333333%
+    }
+
+    .fmp-col-lg-11, .tlp-col-lg-11 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 91.6666666667%;
+        flex: 0 0 91.6666666667%;
+        max-width: 91.6666666667%
+    }
+
+    .fmp-col-lg-12, .tlp-col-lg-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
+
+.fmp-food-item {
+    padding: 20px;
+    overflow: hidden
+}
+
+@media only screen and (min-width: 480px) {
+    .fmp-food-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .fmp-food-item {
+        padding: 25px
+    }
+}
+
+.fmp-image-top .fmp-food-item .fmp-image-wrap {
+    -ms-flex-item-align: start;
+    align-self: flex-start
+}
+
+.fmp-image-top .fmp-layout2 .fmp-box {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.fmp-image-top .fmp-layout4 .fmp-box .fmp-media {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.fmp-image-center .fmp-food-item .fmp-image-wrap {
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.fmp-image-center .fmp-layout2 .fmp-box {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.fmp-image-center .fmp-layout4 .fmp-box .fmp-media {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.fmp-image-bottom .fmp-food-item .fmp-image-wrap {
+    -ms-flex-item-align: end;
+    align-self: flex-end
+}
+
+.fmp-image-bottom .fmp-layout2 .fmp-box {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+
+.fmp-image-bottom .fmp-layout4 .fmp-box .fmp-media {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+
+.fmp-layout-free .fmp-title.woo-template a, .fmp-layout-free-4 .fmp-title.woo-template a, .fmp-layout-free-3 .fmp-title.woo-template a {
+    background-image: none
+}
+
+.fmp-box .fmp-title, .fmp-food-item .fmp-title {
+    width: 100%;
+    margin-bottom: 10px
+}
+
+@media only screen and (min-width: 992px) {
+    .fmp-box .fmp-title, .fmp-food-item .fmp-title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 15px
+    }
+}
+
+.fmp-box .fmp-title h3, .fmp-food-item .fmp-title h3 {
+    border: none;
+    font-weight: 500;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 0;
+    line-height: 28px;
+    color: var(--rtfm-text-color);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    margin-bottom: 3px
+}
+
+@media only screen and (min-width: 992px) {
+    .fmp-box .fmp-title h3, .fmp-food-item .fmp-title h3 {
+        margin-bottom: 0
+    }
+}
+
+.fmp-box .price, .fmp-food-item .price {
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 16px
+}
+
+@media only screen and (min-width: 768px) {
+    .fmp-box .price, .fmp-food-item .price {
+        font-size: 20px
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .fmp-box .price .fmp-price-amount, .fmp-food-item .price .fmp-price-amount {
+        margin-left: 5px
+    }
+}
+
+.fmp-box .price > del, .fmp-food-item .price > del {
+    font-size: 18px;
+    opacity: .6;
+    margin-right: 5px
+}
+
+.fmp-box .price > ins, .fmp-food-item .price > ins {
+    background: rgba(0, 0, 0, 0)
+}
+
+.fmp-box.product .price > del, .fmp-food-item.product .price > del {
+    font-size: 18px;
+    opacity: .6;
+    margin-right: 5px
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper {
+    margin-left: 35px;
+    margin-right: 35px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 40px
+}
+
+@media only screen and (min-width: 768px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper {
+        margin-bottom: 60px
+    }
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title {
+    position: relative;
+    z-index: 1;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 260px;
+    height: 55px
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title span {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600
+}
+
+@media only screen and (min-width: 480px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title span {
+        font-size: 22px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title span {
+        font-size: 24px
+    }
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 100%;
+    z-index: -1
+}
+
+@media only screen and (min-width: 480px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title::before {
+        left: -50px;
+        width: calc(100% + 100px)
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title::before {
+        left: -200px;
+        width: calc(100% + 400px)
+    }
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 10px);
+    z-index: -2;
+    -webkit-box-shadow: 0px 8px 30px var(--rtfm-primary-dark, #ca0000);
+    box-shadow: 0px 8px 30px var(--rtfm-primary-dark, #ca0000);
+    opacity: .25
+}
+
+@media only screen and (min-width: 480px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper .fmp-category-title::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-3 .fmp-category-title::before {
+    -webkit-mask-image: url(../images/title-bg-1.svg);
+    mask-image: url(../images/title-bg-1.svg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background: linear-gradient(94.5deg, var(--rtfm-primary-color, #fc202e) 16.12%, var(--rtfm-primary-dark, #E11D2A) 58.97%)
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-1 {
+    margin-left: 25px;
+    margin-right: 25px
+}
+
+@media only screen and (min-width: 480px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper.type-1 {
+        margin-left: 100px;
+        margin-right: 100px
+    }
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-1 .fmp-category-title::before {
+    background: url(../images/title-bg-2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-1 .fmp-category-title::after {
+    content: none
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-2 {
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: left;
+    margin-bottom: 39px
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-2 .fmp-category-title {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-bottom: 10px
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-2 .fmp-category-title span {
+    font-size: 22px;
+    font-weight: 600
+}
+
+@media only screen and (min-width: 768px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper.type-2 .fmp-category-title span {
+        font-size: 26px
+    }
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-2 .fmp-category-title::before {
+    width: 50px;
+    height: 4px;
+    border-radius: 50px;
+    left: 0;
+    top: auto;
+    bottom: 5px
+}
+
+@media only screen and (min-width: 768px) {
+    [class*=grid-by-cat-free] .fmp-category-title-wrapper.type-2 .fmp-category-title::before {
+        bottom: 0
+    }
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-2 .fmp-category-title::after {
+    content: none
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-4 {
+    margin-left: 23px;
+    margin-right: 23px
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-4 .fmp-category-title {
+    height: 65px
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-4 .fmp-category-title::before {
+    background: url(../images/title-bg-3.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+[class*=grid-by-cat-free] .fmp-category-title-wrapper.type-4 .fmp-category-title::after {
+    content: none
+}
+
+.fmp-wrapper img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle
+}
+
+.fmp-wrapper .fmp-image-wrap {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 20px
+}
+
+@media only screen and (min-width: 480px) {
+    .fmp-wrapper .fmp-image-wrap {
+        max-width: 120px;
+        margin-bottom: 0;
+        margin-right: 20px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .fmp-wrapper .fmp-image-wrap {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+        flex: 0 0 35%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .fmp-wrapper .fmp-image-wrap {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 145px;
+        flex: 0 0 145px;
+        max-width: 145px
+    }
+}
+
+.fmp-wrapper .fmp-image-wrap > a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+    opacity: 0;
+    z-index: 1
+}
+
+.fmp-wrapper .fmp-image-wrap > a .fmp-image-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    font-size: 34px;
+    color: #000;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .15);
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    -webkit-transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045)
+}
+
+.fmp-wrapper .fmp-image-wrap > a .fmp-image-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url(../images/link.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.fmp-wrapper .fmp-image-wrap img {
+    -webkit-transition: opacity .6s, -webkit-transform .6s;
+    transition: opacity .6s, -webkit-transform .6s;
+    transition: opacity .6s, transform .6s;
+    transition: opacity .6s, transform .6s, -webkit-transform .6s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1)
+}
+
+.fmp-wrapper .img-responsive {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto
+}
+
+.fmp-grid-item:hover .fmp-image-wrap > a::before {
+    opacity: 1
+}
+
+.fmp-grid-item:hover .fmp-image-wrap .fmp-image-icon {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+.fmp-grid-item .fmp-image-wrap > a {
+    overflow: hidden
+}
+
+.fmp-grid-item .fmp-image-wrap > a, .fmp-grid-item .fmp-image-wrap > a img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.fmp-hover-zoom_in .fmp-box:hover .fmp-image-wrap img, .fmp-hover-zoom_in .fmp-food-item:hover .fmp-image-wrap img {
+    -webkit-transform: scale3d(1.099, 1.099, 1);
+    transform: scale3d(1.099, 1.099, 1)
+}
+
+.fmp-hover-zoom_out .fmp-box .fmp-image-wrap img, .fmp-hover-zoom_out .fmp-food-item .fmp-image-wrap img {
+    -webkit-transform: scale3d(1.099, 1.099, 1);
+    transform: scale3d(1.099, 1.099, 1)
+}
+
+.fmp-hover-zoom_out .fmp-box:hover .fmp-image-wrap img, .fmp-hover-zoom_out .fmp-food-item:hover .fmp-image-wrap img {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1)
+}
+
+.no-hover-icon.fmp-wrapper .fmp-image-wrap > a::before {
+    content: none
+}
+
+.no-hover-icon.fmp-wrapper .fmp-image-wrap > a .fmp-image-icon {
+    display: none
+}
+
+.fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap .fmp-wc-add-to-cart-btn + .added_to_cart, .fmp-wrapper .fmp-box-wrapper .fmp-wc-add-to-cart-wrap a.button + .added_to_cart, .fmp-wrapper .fmp-food-item.product .fmp-wc-add-to-cart-btn + .added_to_cart, .fmp-wrapper .fmp-food-item.product a.button + .added_to_cart {
+    position: relative;
+    text-indent: -99999px;
+    right: 0;
+    -webkit-mask-image: url(../images/check.svg);
+    mask-image: url(../images/check.svg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: left;
+    mask-position: left;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    width: 20px;
+    height: 40px;
+    margin-left: 15px
+}
+
+.fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more {
+    margin-bottom: 3px
+}
+
+.fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-1::before {
+    border: 2px solid var(--rtfm-primary-color);
+    background: rgba(0, 0, 0, 0)
+}
+
+.fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-1::after {
+    background: rgba(0, 0, 0, 0)
+}
+
+.fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-1:hover::after {
+    background: linear-gradient(94.5deg, var(--rtfm-primary-color, #fc202e) 16.12%, var(--rtfm-primary-dark, #fc202e) 58.97%)
+}
+
+.fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-2::before {
+    border: 2px solid #bdbdbd;
+    background: rgba(0, 0, 0, 0)
+}
+
+.fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-2::after {
+    background: rgba(0, 0, 0, 0)
+}
+
+.fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-2:hover {
+    border-image-source: rgba(0, 0, 0, 0)
+}
+
+.fmp-wrapper[id*=fmp-container-] .fmp-btn-read-more.type-2:hover::after {
+    background: linear-gradient(94.5deg, var(--rtfm-primary-dark, #fc202e) 16.12%, var(--rtfm-primary-color, #fc202e) 58.97%)
+}
+
+.fmp-wrapper .fmp-wc-add-to-cart-btn.loading {
+    padding-right: 30px
+}
+
+.fmp-wrapper .fmp-wc-add-to-cart-btn.loading span {
+    pointer-events: none !important;
+    cursor: default !important
+}
+
+.fmp-wrapper .fmp-wc-add-to-cart-btn.loading span:before {
+    content: "";
+    position: absolute;
+    right: 4px;
+    top: 12px;
+    -webkit-animation: fmp-spin 2s infinite linear;
+    animation: fmp-spin 2s infinite linear;
+    background-image: url(../images/spinner.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px
+}
+
+.fmp-menu-popup a.fmp-btn.special-menu-btn {
+    text-transform: uppercase;
+    padding: 12px 24px
+}
+
+.fmp-pagination ul.pagination-list {
+    margin: 30px 0 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 500
+}
+
+@media only screen and (min-width: 768px) {
+    .fmp-pagination ul.pagination-list {
+        margin: 45px 0 0
+    }
+}

@@ -7,6 +7,9 @@ import { cssSourceMap } from "./devTools/vitePlugin/cssSourceMap";
 import { wrapSpecificFilesInIIFE } from "./devTools/vitePlugin/wrapIIFE";
 
 export default defineConfig({
+    css: {
+        devSourcemap: true, // Enable CSS source maps during development
+    },
     plugins: [
         react(),
         tailwindcss(),
