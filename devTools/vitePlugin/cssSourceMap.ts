@@ -3,7 +3,8 @@ import type { Plugin } from "vite";
 
 /**
  * Generates CSS source map files for all CSS assets in the bundle.
- * For standalone SCSS entries: compiles the original SCSS with source maps.
+ * For standalone SCSS entries: re-compiles the original SCSS and replaces
+ * the CSS output so the source map mappings match exactly.
  * For CSS extracted from JS entries: generates a basic identity source map.
  *
  * @param scssEntries - Record of output CSS path (without extension) to source SCSS file path
@@ -37,10 +38,24 @@ export function cssSourceMap(scssEntries: Record<string, string> = {}): Plugin {
                     const result = sass.compile(path.resolve(scssSrc), {
                         sourceMap: true,
                         sourceMapIncludeSources: true,
-                        style: "compressed",
+                        style: "expanded",
                     });
 
                     if (result.sourceMap) {
+                        // Rebase sources paths relative to the map file output directory
+                        const mapDir = path.dirname(mapFilePath);
+                        result.sourceMap.sources = result.sourceMap.sources.map(
+                            (source: string) => {
+                                const filePath = source.startsWith("file:")
+                                    ? new URL(source).pathname
+                                    : path.resolve(source);
+                                return path.relative(mapDir, filePath);
+                            }
+                        );
+
+                        // Replace CSS with sass-compiled output so map and CSS are in sync
+                        const cssWithMapRef = `${result.css}\n/*# sourceMappingURL=${path.basename(mapFilePath)} */\n`;
+                        fs.writeFileSync(cssFilePath, cssWithMapRef);
                         fs.writeFileSync(mapFilePath, JSON.stringify(result.sourceMap));
                     }
                 } else {
@@ -56,15 +71,14 @@ export function cssSourceMap(scssEntries: Record<string, string> = {}): Plugin {
                         mappings: "AAAA" + ";" + mappings.slice(5),
                     };
                     fs.writeFileSync(mapFilePath, JSON.stringify(sourceMap));
-                }
 
-                // Append sourceMappingURL to CSS file
-                const cssContent = fs.readFileSync(cssFilePath, "utf-8");
-                if (!cssContent.includes("sourceMappingURL")) {
-                    fs.writeFileSync(
-                        cssFilePath,
-                        `${cssContent}\n/*# sourceMappingURL=${path.basename(mapFilePath)} */\n`
-                    );
+                    // Append sourceMappingURL to CSS file
+                    if (!cssContent.includes("sourceMappingURL")) {
+                        fs.writeFileSync(
+                            cssFilePath,
+                            `${cssContent}\n/*# sourceMappingURL=${path.basename(mapFilePath)} */\n`
+                        );
+                    }
                 }
             }
         },
