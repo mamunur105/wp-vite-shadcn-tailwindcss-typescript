@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInitec39acfaccf4314b5b0efe0ef5538d49
 {
     public static $prefixLengthsPsr4 = array (
-        'W' => 
+        'W' =>
         array (
             'WPVSTT\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'WPVSTT\\' => 
+        'WPVSTT\\' =>
         array (
             0 => __DIR__ . '/../..' . '/main',
         ),
@@ -22,18 +22,6 @@ class ComposerStaticInitec39acfaccf4314b5b0efe0ef5538d49
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'WPVSTT\\Controllers\\APIController' => __DIR__ . '/../..' . '/main/Controllers/APIController.php',
-        'WPVSTT\\Controllers\\AdminController' => __DIR__ . '/../..' . '/main/Controllers/AdminController.php',
-        'WPVSTT\\Controllers\\AssetsController' => __DIR__ . '/../..' . '/main/Controllers/AssetsController.php',
-        'WPVSTT\\Controllers\\FrontEndController' => __DIR__ . '/../..' . '/main/Controllers/FrontEndController.php',
-        'WPVSTT\\Controllers\\Installation' => __DIR__ . '/../..' . '/main/Controllers/Installation.php',
-        'WPVSTT\\Helpers\\Config' => __DIR__ . '/../..' . '/main/Helpers/Config.php',
-        'WPVSTT\\Helpers\\Fns' => __DIR__ . '/../..' . '/main/Helpers/Fns.php',
-        'WPVSTT\\Hooks\\AdminHooks' => __DIR__ . '/../..' . '/main/Hooks/AdminHooks.php',
-        'WPVSTT\\Hooks\\CommonAreaHooks' => __DIR__ . '/../..' . '/main/Hooks/CommonAreaHooks.php',
-        'WPVSTT\\Hooks\\FrontEndHooks' => __DIR__ . '/../..' . '/main/Hooks/FrontEndHooks.php',
-        'WPVSTT\\Traits\\SingletonTrait' => __DIR__ . '/../..' . '/main/Traits/SingletonTrait.php',
-        'WPVSTT\\WPVSTT_Main' => __DIR__ . '/../..' . '/main/WPVSTT_Main.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -105,9 +105,50 @@ async function runZip() {
 }
 
 /**
+ * Check if Composer dependencies are properly installed
+ */
+async function checkComposerInstall() {
+    const autoloadFile = path.join(packagePath, "vendor", "autoload.php");
+    const composerLock = path.join(packagePath, "composer.lock");
+
+    // Check vendor/autoload.php exists
+    if (!(await fs.pathExists(autoloadFile))) {
+        console.error(cliColor.red(`${emojic.x} Composer dependencies not installed. Run "composer install" first.`));
+        process.exit(1);
+    }
+
+    // Check all locked packages are installed
+    if (await fs.pathExists(composerLock)) {
+        const lockData = await fs.readJson(composerLock);
+        const packages = [...(lockData.packages || []), ...(lockData["packages-dev"] || [])];
+        const missingPackages = [];
+
+        for (const pkg of packages) {
+            const pkgDir = path.join(packagePath, "vendor", pkg.name);
+            if (!(await fs.pathExists(pkgDir))) {
+                missingPackages.push(pkg.name);
+            }
+        }
+
+        if (missingPackages.length > 0) {
+            console.error(cliColor.red(`${emojic.x} Composer dependencies are not properly installed. Missing packages:`));
+            missingPackages.forEach((name) => {
+                console.error(cliColor.red(`   - ${name}`));
+            });
+            console.error(cliColor.yellow(`\nRun "composer install" to fix this.`));
+            process.exit(1);
+        }
+    }
+
+    console.log(cliColor.green(`${emojic.whiteCheckMark} Composer dependencies verified`));
+}
+
+/**
  * Main handler
  */
 async function main() {
+    await checkComposerInstall();
+
     const mode = process.env.NODE_ENV;
     if (mode === "package") {
         await runPackage();

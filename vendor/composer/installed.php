@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => 'tinysolutions/badges-for-woo',
+        'name' => 'tinysolutions/example-for-woo',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '8977ab64b8dd4261576cd9d04202be6e6b6c5a0e',
+        'reference' => '4eb76640025435919c91d30f670b8f208a22e40f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        'tinysolutions/badges-for-woo' => array(
+        'tinysolutions/example-for-woo' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '8977ab64b8dd4261576cd9d04202be6e6b6c5a0e',
+            'reference' => '4eb76640025435919c91d30f670b8f208a22e40f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
