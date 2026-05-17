@@ -27,3 +27,4 @@ dist-ssr
 *.sw?
 
 assets
+languages/wp-vite-shadcn-tailwindcss-typescript.pot
